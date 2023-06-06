@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Example</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="dropdown">Select an option:</label>
+        <select id="dropdown" name="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+    {% if selected_option %}
+        <p>You selected: {{ selected_option }}</p>
+    {% endif %}
+</body>
+</html>
